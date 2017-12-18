@@ -33,6 +33,7 @@ function login (){
           // Click su Amici dal menu
           $("#amici").click(function(){
             console.log("Cliccato bottone Amici");
+            navigator.geolocation.clearWatch(id);
             $("#page").load("amici.html");
             scaricaAmici();
           });
@@ -40,6 +41,7 @@ function login (){
           // Click su Nuovo Amico dal menu
           $("#nuovo_amico").click(function(){
             console.log("Cliccato bottone nuovo amico");
+            navigator.geolocation.clearWatch(id);
             $("#page").load("nuovo-amico.html",function (){
               nuovoAmico();
             });
@@ -48,6 +50,7 @@ function login (){
           // Click su Nuovo Stato dal menu
           $("#nuovo_stato").click(function(){
             console.log("Cliccato bottone nuovo stato");
+            navigator.geolocation.clearWatch(id);
             $("#page").load("nuovo-stato.html",function (){
               nuovoStato();
             });
@@ -56,6 +59,7 @@ function login (){
           // Click su Profilo dal menu
           $("#profilo").click(function(){
             console.log("Cliccato bottone profilo");
+            navigator.geolocation.clearWatch(id);
             $("#page").load("profilo.html",function (){
               profilo();
             });

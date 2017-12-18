@@ -6,8 +6,6 @@ function watchPosition(){
 
   function success(position) {
 
-    var id;
-
     console.log('Latitude: '          + position.coords.latitude          + '\n' +
           'Longitude: '         + position.coords.longitude         + '\n' +
           'Altitude: '          + position.coords.altitude          + '\n' +
@@ -28,8 +26,8 @@ function watchPosition(){
 
   var options = {
     enableHighAccuracy: true,
-    timeout: 60*1000,
-    maximumAge: 0
+    timeout: 10*1000,
+    maximumAge: 50*1000
   };
 
   navigator.geolocation.watchPosition(success, error, options);

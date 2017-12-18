@@ -6,8 +6,8 @@ function getPosition(){
 
   var options = {
     enableHighAccuracy: true,
-    timeout: 60*1000,
-    maximumAge: 0
+    timeout: 10*1000,
+    maximumAge: 50*1000
   };
 
 
