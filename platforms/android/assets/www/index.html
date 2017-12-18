@@ -12,53 +12,59 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-light bg-faded rounded navbar-toggleable-md" id="navigation" style="display:none">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar fixed-top navbar-light bg-faded rounded navbar-toggleable-md" id="navigation" style="display:none">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="#">Geopost</a>
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Amici <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse" href="#" id="amici">Amici</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Nuovo Amico</a>
+          <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse" href="#" id="nuovo_amico">Nuovo Amico</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Nuovo Stato</a>
+          <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse" href="#" id="nuovo_stato">Nuovo Stato</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Profilo</a>
+          <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse" href="#" id="profilo">Profilo</a>
         </li>
       </ul>
     </div>
   </nav>
-  <div class="container">
-    <div class="row justify-content-center" id="page">
-      <div class="card" style="padding:5%;margin:5%">
-        <h4 class="card-title">GeoPost</h2> <br>
-          <form>
-            <div class="input-group">
-              <span class="input-group-addon" id="basic-addon1"><img src="img/icons/person-2x.png"></span>
-              <input type="text" id="username" class="form-control" placeholder="Username" aria-label="Username" required aria-describedby="basic-addon1">
-            </div> <br>
-            <div class="input-group">
-              <span class="input-group-addon" id="basic-addon2"><img src="img/icons/lock-locked-2x.png"></span>
-              <input type="password" id="password" class="form-control" placeholder="Password" aria-label="Password" required aria-describedby="basic-addon2">
-            </div> <br>
-            <button type="button" name="button" class="btn btn-primary btn-block" id="login">Login</button>
-          </form> <br>
-          <div id="messaggio"> </div>
-        </div>
-      </div>
+
+  <!-- Page container -->
+  <div class="container" style="padding-top: 4.5rem;">
+
+    <!-- Riga che contiene man mano le pagine che vengono caricate dinamicamente -->
+    <div class="row" id="page">
     </div>
 
+  </div>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhRu2XvYBBvCEe05rrkLKm1Hg9VSJIaX8"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/scarica-amici.js"></script>
+    <script type="text/javascript" src="js/amici-mappa.js"></script>
+    <script type="text/javascript" src="js/amici-lista.js"></script>
+    <script type="text/javascript" src="js/profilo.js"></script>
+    <script type="text/javascript" src="js/nuovo-amico.js"></script>
+    <script type="text/javascript" src="js/nuovo-stato.js"></script>
+    <script type="text/javascript" src="js/posizione-mappa.js"></script>
+    <script type="text/javascript" src="js/segui-posizione.js"></script>
+    <script type="text/javascript" src="js/logout.js"></script>
+
+    <script type="text/javascript">
+    app.initialize();
+    </script>
 
 </body>
 
