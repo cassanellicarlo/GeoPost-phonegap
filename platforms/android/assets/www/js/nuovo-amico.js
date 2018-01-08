@@ -59,9 +59,14 @@ function nuovoAmico (){
               console.log(jqXHR.status);
               console.log(jqXHR.responseText);
 
+              var errore;
+              if(jqXHR.responseText=="CANNOT FOLLOW YOURSELF") errore="Non puoi seguire te stesso!";
+              else if (jqXHR.responseText=="ALREADY FOLLOWING USER") errore="Stai già seguendo questo amico!";
+              else if(jqXHR.responseText=="USERNAME NOT FOUND") errore="Username non trovato!";
+
               var errorMessage="<div style='margin-top:20px' class='alert alert-danger alert-dismissible fade show' role='alert'>";
               errorMessage+="<button type='button' class='close' data-dismiss='alert' aria-label='close'> <span aria-hidden='true'>&times;</span> </button>";
-              errorMessage+="Errore! \n"+jqXHR.responseText+"</div>";
+              errorMessage+="Errore! \n"+errore+"</div>";
               $("#utenti").prepend(errorMessage);
             },
 

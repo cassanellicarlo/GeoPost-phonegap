@@ -73,10 +73,12 @@ function login (){
         console.log(jqXHR.status);
         console.log(jqXHR.responseText);
 
+        var errore;
+        if(jqXHR.responseText=="INVALID CREDENTIALS") errore="Credenziali non valide";
 
         var errorMessage="<div style='margin-top:20px' class='alert alert-danger alert-dismissible fade show' role='alert'>";
         errorMessage+="<button type='button' class='close' data-dismiss='alert' aria-label='close'> <span aria-hidden='true'>&times;</span> </button>";
-        errorMessage+=jqXHR.responseText+"</div>";
+        errorMessage+=errore+"</div>";
         $("#messaggio").html(errorMessage);
 
 

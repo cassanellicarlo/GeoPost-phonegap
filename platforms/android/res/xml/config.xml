@@ -39,12 +39,12 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <name>helloworld</name>
+    <name>GeoPost</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Geolocation based social network.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="carlo.cassanelli@studenti.unimi.it">
+        Carlo Cassanelli
     </author>
     <content src="index.html" />
     <access origin="*" />

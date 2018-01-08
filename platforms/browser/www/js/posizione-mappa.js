@@ -40,6 +40,39 @@ function success(position) {
 
 }
 
-function error(err) {
-  console.warn(`ERROR(${err.code}): ${err.message}`);
+function error(error) {
+  console.warn(`ERROR(${error.code}): ${error.message}`);
+  var errorMessage;
+
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+        console.log("User denied the request for Geolocation.");
+
+        $("#status-update").prop("disabled",true); // disabilito il bottone aggiorna stato perché l'utente non ha dato il permesso della posizione.
+
+        errorMessage="<div style='margin-top:20px' class='alert alert-warning alert-dismissible fade show' role='alert'>";
+        errorMessage+="<button type='button' class='close' data-dismiss='alert' aria-label='close'> <span aria-hidden='true'>&times;</span> </button>";
+        errorMessage+="Non hai dato i permessi per la posizione.</div>";
+        $("#aggiorna-stato").prepend(errorMessage);
+        break;
+    case error.POSITION_UNAVAILABLE:
+        console.log("Location information is unavailable.");
+
+        errorMessage="<div style='margin-top:20px' class='alert alert-warning alert-dismissible fade show' role='alert'>";
+        errorMessage+="<button type='button' class='close' data-dismiss='alert' aria-label='close'> <span aria-hidden='true'>&times;</span> </button>";
+        errorMessage+="Posizione non disponibile.</div>";
+        $("#aggiorna-stato").prepend(errorMessage);
+        break;
+    case error.TIMEOUT:
+        console.log("The request to get user location timed out.");
+        errorMessage="<div style='margin-top:20px' class='alert alert-warning alert-dismissible fade show' role='alert'>";
+        errorMessage+="<button type='button' class='close' data-dismiss='alert' aria-label='close'> <span aria-hidden='true'>&times;</span> </button>";
+        errorMessage+="Timeout - Posizione non disponibile. Assicurati di aver attivato il GPS.</div>";
+        $("#aggiorna-stato").prepend(errorMessage);
+        break;
+    case error.UNKNOWN_ERROR:
+        console.log("An unknown error occurred.");
+        break;
+  }
+
 }

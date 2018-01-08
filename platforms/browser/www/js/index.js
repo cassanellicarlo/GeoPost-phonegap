@@ -1,3 +1,7 @@
+// geolocation
+var id;
+
+
 var app = {
 
     initialize: function() {

@@ -4,6 +4,7 @@ function profilo (){
 
   $("#logout").click(function(){
     console.log("cliccato bottone logout");
+    navigator.geolocation.clearWatch(id);
     logout();
   });
 

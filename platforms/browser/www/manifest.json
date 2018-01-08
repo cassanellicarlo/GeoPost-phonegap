@@ -1,11 +1,11 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "helloworld",
-  "short_name": "helloworld",
+  "name": "GeoPost",
+  "short_name": "GeoPost",
   "version": "com.phonegap.helloworld",
-  "description": "Hello World sample application that responds to the deviceready event.",
-  "author": "PhoneGap Team",
+  "description": "Geolocation based social network.",
+  "author": "Carlo Cassanelli",
   "icons": [],
   "start_url": "index.html"
 }

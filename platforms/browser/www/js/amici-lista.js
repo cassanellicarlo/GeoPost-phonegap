@@ -8,6 +8,7 @@ function listaAmici (){
   // al click del bottone Mappa
   $("#mostraMappa").click(function(){
       console.log("click bottone mappa");
+      navigator.geolocation.clearWatch(id);
       $("#lista-amici").hide();
       $("#googleMap").show();
       $("#mostraMappa").removeClass("btn btn-secondary");
@@ -16,6 +17,7 @@ function listaAmici (){
       $("#mostraLista").addClass("btn btn-secondary");
 
       mappaAmici();
+
     });
 
 
