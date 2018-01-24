@@ -1,0 +1,30 @@
+#colonnasx{
+  margin:20px;
+}
+
+#colonnadx{
+  margin:20px;
+}
+
+
+ @media screen and (orientation: landscape) {
+
+   #colonnasx{
+     width:35%;
+   }
+
+   #colonnadx{
+     width: 45%;
+   }
+}
+
+@media screen and (orientation: portrait) {
+
+#colonnasx{
+    width:100%;
+  }
+
+  #colonnadx{
+    width: 100%;
+  }
+}

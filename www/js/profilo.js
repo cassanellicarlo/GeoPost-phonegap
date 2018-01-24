@@ -24,18 +24,26 @@ function profilo (){
       $("#username").html(username);
       $("#messaggio").html(msg);
 
-      var myLatLng = {lat: mylat, lng: mylon};
+      if(mylat==null && mylon==null){
+        console.log("L'utente non ha ancora un messaggio!");
+      }
 
-      var map = new google.maps.Map(document.getElementById('googleMapProfilo'), {
-        zoom: 4,
-        center: myLatLng
-      });
+      else{
+        var myLatLng = {lat: mylat, lng: mylon};
 
-      var marker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        title: 'Posizione ultimo messaggio'
-      });
+        var map = new google.maps.Map(document.getElementById('googleMapProfilo'), {
+          zoom: 4,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Posizione ultimo messaggio'
+        });
+      }
+
+
 
     }
 
