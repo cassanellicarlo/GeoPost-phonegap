@@ -1,5 +1,3 @@
-// geolocation
-var id;
 
 
 var app = {
@@ -108,3 +106,6 @@ var friend_list = new FriendList ();
 // dichiarazione latitudine - longitudine corrente
 var current_lat;
 var current_lon;
+
+// geolocation
+var id;

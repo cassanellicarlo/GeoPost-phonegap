@@ -1,6 +1,6 @@
 // genera la mappa con i markers
 function mappaAmici (){
-  navigator.geolocation.clearWatch(id);
+  // navigator.geolocation.clearWatch(id);
   $("#mostraLista").click(function(){
       console.log("click bottone lista");
       $("#googleMap").hide();

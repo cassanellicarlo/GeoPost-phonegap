@@ -65,10 +65,10 @@ function error(error) {
         break;
     case error.TIMEOUT:
         console.log("The request to get user location timed out.");
-        errorMessage="<div style='margin-top:20px' class='alert alert-warning alert-dismissible fade show' role='alert'>";
-        errorMessage+="<button type='button' class='close' data-dismiss='alert' aria-label='close'> <span aria-hidden='true'>&times;</span> </button>";
-        errorMessage+="Timeout - Posizione non disponibile. Assicurati di aver attivato il GPS.</div>";
-        $("#aggiorna-stato").prepend(errorMessage);
+        // errorMessage="<div style='margin-top:20px' class='alert alert-warning alert-dismissible fade show' role='alert'>";
+        // errorMessage+="<button type='button' class='close' data-dismiss='alert' aria-label='close'> <span aria-hidden='true'>&times;</span> </button>";
+        // errorMessage+="Timeout - Posizione non disponibile. Assicurati di aver attivato il GPS.</div>";
+        // $("#aggiorna-stato").prepend(errorMessage);
         break;
     case error.UNKNOWN_ERROR:
         console.log("An unknown error occurred.");
